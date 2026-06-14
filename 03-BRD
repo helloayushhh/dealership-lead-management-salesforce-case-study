@@ -1,0 +1,308 @@
+# Business Requirements Document (BRD)
+
+# Project Name
+
+Dealership Lead Management Transformation using Salesforce Automotive Cloud
+
+# Version
+
+1.0
+
+# Prepared By
+
+Ayush Pandey
+
+# Date
+
+June 2026
+
+---
+
+# 1. Executive Summary
+
+A regional automobile dealership network currently manages customer leads through multiple disconnected channels including website inquiries, showroom visits, phone calls, social media campaigns, and referral programs. The existing process relies heavily on manual lead assignment, spreadsheet tracking, and inconsistent follow-up practices.
+
+As lead volume increases, the dealership faces delayed customer responses, duplicate records, poor visibility into sales activities, and inconsistent customer experiences across branches.
+
+This project proposes a Salesforce Automotive Cloud solution to streamline lead capture, qualification, assignment, nurturing, and conversion through automation, centralized data management, and real-time reporting.
+
+---
+
+# 2. Business Problem
+
+The dealership currently experiences the following challenges:
+
+* Leads are received from multiple sources without centralized management.
+* Manual lead assignment delays customer engagement.
+* Duplicate lead records affect data quality.
+* Sales representatives lack visibility into customer interactions.
+* Follow-up activities are inconsistent across branches.
+* Management lacks actionable reporting and performance insights.
+* Marketing teams cannot accurately measure campaign effectiveness.
+
+These challenges result in lost sales opportunities, reduced customer satisfaction, and lower operational efficiency.
+
+---
+
+# 3. Project Objectives
+
+The primary objectives of this project are:
+
+* Centralize lead management within Salesforce Automotive Cloud.
+* Automate lead assignment and qualification.
+* Improve customer response times.
+* Increase lead-to-sale conversion rates.
+* Standardize dealership processes across branches.
+* Provide management with real-time dashboards and reports.
+* Improve customer engagement throughout the sales journey.
+
+---
+
+# 4. Business Goals
+
+| Goal ID | Business Goal                         |
+| ------- | ------------------------------------- |
+| BG-01   | Increase lead conversion rates        |
+| BG-02   | Reduce lead response time             |
+| BG-03   | Improve sales productivity            |
+| BG-04   | Standardize lead management processes |
+| BG-05   | Improve reporting and visibility      |
+| BG-06   | Enhance customer experience           |
+
+---
+
+# 5. Scope
+
+## In Scope
+
+* Lead Capture
+* Lead Qualification
+* Lead Assignment
+* Lead Nurturing
+* Test Drive Scheduling
+* Opportunity Creation
+* Sales Pipeline Tracking
+* Reporting & Dashboards
+* Customer Communication Tracking
+
+## Out of Scope
+
+* Vehicle Inventory Management
+* Accounting & Finance Systems
+* Vehicle Service Operations
+* Warranty Management
+* Supplier Management
+
+---
+
+# 6. Stakeholders
+
+| Stakeholder                 | Role                  |
+| --------------------------- | --------------------- |
+| Dealer Principal            | Project Sponsor       |
+| Sales Manager               | Business Owner        |
+| Marketing Manager           | Lead Generation Owner |
+| Sales Representatives       | Primary Users         |
+| Customer Service Team       | Operational Users     |
+| Regional Operations Manager | Process Owner         |
+| IT Administrator            | Technical Support     |
+
+---
+
+# 7. Current State Analysis (AS-IS)
+
+Current lead management process:
+
+1. Customer submits inquiry.
+2. Lead information is captured manually.
+3. Sales manager assigns lead to representative.
+4. Sales representative contacts customer.
+5. Follow-up activities are tracked manually.
+6. Test drive scheduling is coordinated through phone/email.
+7. Management reporting is prepared manually.
+
+## Current Issues
+
+* Delayed lead assignment.
+* Inconsistent follow-ups.
+* Lack of lead prioritization.
+* Duplicate customer records.
+* Limited visibility into lead status.
+* Time-consuming reporting process.
+
+---
+
+# 8. Future State Analysis (TO-BE)
+
+Future lead management process:
+
+1. Lead captured automatically from all channels.
+2. Salesforce validates customer data.
+3. Lead assigned automatically based on predefined business rules.
+4. Sales representative receives instant notification.
+5. Lead qualification process begins.
+6. Follow-up activities generated automatically.
+7. Test drive scheduled through Salesforce.
+8. Opportunity created upon qualification.
+9. Management monitors performance through dashboards.
+
+---
+
+# 9. Functional Requirements
+
+## Lead Capture
+
+### BR-01
+
+The system shall capture leads from website forms, social media campaigns, phone inquiries, and showroom visits.
+
+### BR-02
+
+The system shall automatically create a lead record upon receipt of customer information.
+
+### BR-03
+
+The system shall validate mandatory customer fields before lead creation.
+
+---
+
+## Lead Assignment
+
+### BR-04
+
+The system shall automatically assign leads based on dealership location.
+
+### BR-05
+
+The system shall notify assigned sales representatives immediately after lead assignment.
+
+### BR-06
+
+The system shall allow sales managers to manually reassign leads when required.
+
+---
+
+## Lead Qualification
+
+### BR-07
+
+The system shall support lead qualification based on predefined criteria.
+
+### BR-08
+
+The system shall capture customer vehicle preferences and purchase intent.
+
+### BR-09
+
+The system shall allow sales representatives to update lead status.
+
+---
+
+## Follow-Up Management
+
+### BR-10
+
+The system shall automatically create follow-up tasks.
+
+### BR-11
+
+The system shall generate reminders for overdue follow-ups.
+
+### BR-12
+
+The system shall maintain communication history for each lead.
+
+---
+
+## Test Drive Scheduling
+
+### BR-13
+
+The system shall allow scheduling of vehicle test drives.
+
+### BR-14
+
+The system shall send confirmation notifications to customers.
+
+### BR-15
+
+The system shall track test drive completion status.
+
+---
+
+## Reporting & Analytics
+
+### BR-16
+
+The system shall provide lead conversion reports.
+
+### BR-17
+
+The system shall provide sales performance dashboards.
+
+### BR-18
+
+The system shall provide lead source effectiveness reports.
+
+### BR-19
+
+The system shall provide branch-level performance reports.
+
+---
+
+# 10. Non-Functional Requirements
+
+| ID     | Requirement                                  |
+| ------ | -------------------------------------------- |
+| NFR-01 | System availability should be 99.9%          |
+| NFR-02 | User authentication must be role-based       |
+| NFR-03 | Lead assignment should occur within 1 minute |
+| NFR-04 | Reports should load within 5 seconds         |
+| NFR-05 | Customer data must be securely stored        |
+
+---
+
+# 11. Assumptions
+
+* Salesforce Automotive Cloud will be the primary CRM platform.
+* Users will receive adequate system training.
+* Customer data sources will be available for integration.
+* Dealership management will support process standardization.
+
+---
+
+# 12. Constraints
+
+* Existing dealership processes may vary across branches.
+* Data quality issues may exist in legacy systems.
+* Integration dependencies may impact implementation timelines.
+
+---
+
+# 13. Success Metrics
+
+| KPI                         | Current State | Target State |
+| --------------------------- | ------------- | ------------ |
+| Lead Response Time          | 24 Hours      | < 15 Minutes |
+| Lead Conversion Rate        | 8%            | 15%          |
+| Duplicate Lead Records      | 12%           | < 2%         |
+| Follow-Up Compliance        | 60%           | 95%          |
+| Customer Satisfaction Score | 75%           | 90%          |
+
+---
+
+# 14. Expected Business Benefits
+
+* Faster customer engagement.
+* Increased lead conversion rates.
+* Reduced manual effort.
+* Improved data quality.
+* Better sales forecasting.
+* Improved management visibility.
+* Consistent customer experience across dealership branches.
+
+---
+
+# Approval
+
+This document represents the agreed business requirements for the Dealership Lead Management Transformation project and serves as the foundation for functional specifications, solution design, development, testing, and implementation activities.
