@@ -71,10 +71,6 @@ This project showcases core Business Analyst deliverables including:
 
 ✅ Salesforce Solution Design
 
-✅ Requirement Traceability
-
-✅ User Acceptance Testing Support
-
 ---
 
 # Project Deliverables
@@ -89,9 +85,6 @@ This project showcases core Business Analyst deliverables including:
 | 06-Process-Flows                   | Current and future state business processes         |
 | 07-Wireframes                      | User interface wireframes                           |
 | 08-Salesforce-Solution-Design      | Salesforce architecture and solution design         |
-| 09-Requirement-Traceability-Matrix | Requirement mapping and traceability                |
-| 10-UAT-Test-Cases                  | User Acceptance Testing scenarios                   |
-
 ---
 
 Project Repository Structure
