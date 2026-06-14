@@ -1,0 +1,468 @@
+# Wireframes Document
+
+# Project Name
+
+Dealership Lead Management Transformation using Salesforce Automotive Cloud
+
+# Version
+
+1.0
+
+# Prepared By
+
+Ayush Pandey
+
+# Date
+
+June 2026
+
+---
+
+# 1. Purpose
+
+This document provides low-fidelity wireframes for the Dealership Lead Management System implemented on Salesforce Automotive Cloud.
+
+The wireframes represent the key screens required to support lead capture, assignment, qualification, test drive scheduling, opportunity management, and reporting.
+
+These wireframes are intended to help business stakeholders, developers, QA teams, and solution architects understand the expected system functionality and user experience.
+
+---
+
+# Screen 1: Lead Management Dashboard
+
+## Purpose
+
+Provides sales representatives and managers with a consolidated view of lead activities, assignments, follow-ups, and performance metrics.
+
+## Wireframe
+
+```text
++-------------------------------------------------------------+
+| DEALERSHIP LEAD MANAGEMENT DASHBOARD                        |
++-------------------------------------------------------------+
+
+Total Leads: 1,245
+Qualified Leads: 450
+Converted Leads: 182
+Conversion Rate: 14.6%
+
++-------------------------------------------------------------+
+| My Assigned Leads                                           |
++-------------------------------------------------------------+
+| Lead ID | Customer | Vehicle | Status | Follow-Up Date     |
+|-------------------------------------------------------------|
+| LD001   | John D.  | SUV     | New    | 12-Jun-2026        |
+| LD002   | Sarah K. | Sedan   | Contacted | 13-Jun-2026     |
++-------------------------------------------------------------+
+
++-------------------------------------------------------------+
+| Upcoming Activities                                         |
++-------------------------------------------------------------+
+| Follow-Up Call - 10:00 AM                                   |
+| Test Drive - 02:00 PM                                       |
+| Customer Meeting - 04:00 PM                                 |
++-------------------------------------------------------------+
+```
+
+## Functional Requirements
+
+* Display lead summary metrics.
+* Display assigned leads.
+* Display upcoming tasks and reminders.
+* Allow quick navigation to lead records.
+
+---
+
+# Screen 2: Lead Capture Form
+
+## Purpose
+
+Capture customer inquiries from various channels.
+
+## Wireframe
+
+```text
++-------------------------------------------------------------+
+| NEW LEAD                                                    |
++-------------------------------------------------------------+
+
+First Name        [________________]
+
+Last Name         [________________]
+
+Mobile Number     [________________]
+
+Email Address     [________________]
+
+Preferred Vehicle [________________]
+
+Lead Source       [Dropdown]
+
+Branch Location   [Dropdown]
+
+Comments
+
+[______________________________________]
+
+[______________________________________]
+
+                [ Save Lead ]
+```
+
+## Functional Requirements
+
+* Mandatory field validation.
+* Duplicate lead detection.
+* Automatic lead creation.
+
+---
+
+# Screen 3: Lead Detail Page
+
+## Purpose
+
+Provide complete information about a lead.
+
+## Wireframe
+
+```text
++-------------------------------------------------------------+
+| LEAD DETAILS                                                |
++-------------------------------------------------------------+
+
+Lead ID: LD001
+
+Customer Name: John Doe
+
+Phone: +91 XXXXX XXXXX
+
+Email: john@email.com
+
+Preferred Vehicle: SUV
+
+Lead Source: Website
+
+Status: Contacted
+
+Assigned To: Rahul Sharma
+
+-------------------------------------------------------------
+
+Activity History
+
+- Inquiry Submitted
+- Follow-Up Call Completed
+- Vehicle Information Sent
+
+-------------------------------------------------------------
+
+[ Qualify Lead ]
+
+[ Schedule Test Drive ]
+
+[ Convert Lead ]
+```
+
+## Functional Requirements
+
+* View lead information.
+* Track communication history.
+* Update lead status.
+* Initiate qualification process.
+
+---
+
+# Screen 4: Lead Qualification Screen
+
+## Purpose
+
+Evaluate lead quality and purchase readiness.
+
+## Wireframe
+
+```text
++-------------------------------------------------------------+
+| LEAD QUALIFICATION                                          |
++-------------------------------------------------------------+
+
+Customer Budget
+
+( ) Below ₹10 Lakh
+
+( ) ₹10-20 Lakh
+
+( ) ₹20+ Lakh
+
+Purchase Timeline
+
+( ) Within 30 Days
+
+( ) 1-3 Months
+
+( ) 3-6 Months
+
+Vehicle Interest Confirmed?
+
+( ) Yes
+
+( ) No
+
+Customer Contact Established?
+
+( ) Yes
+
+( ) No
+
+-------------------------------------------------------------
+
+Qualification Status
+
+[ Qualified ▼ ]
+
+-------------------------------------------------------------
+
+[ Save ]
+```
+
+## Functional Requirements
+
+* Record qualification criteria.
+* Update qualification status.
+* Generate follow-up activities.
+
+---
+
+# Screen 5: Test Drive Scheduling
+
+## Purpose
+
+Schedule and manage customer test drive appointments.
+
+## Wireframe
+
+```text
++-------------------------------------------------------------+
+| TEST DRIVE SCHEDULING                                       |
++-------------------------------------------------------------+
+
+Customer Name
+
+[ John Doe ]
+
+Vehicle Model
+
+[ SUV Model X ▼ ]
+
+Date
+
+[ 15-Jun-2026 ]
+
+Time
+
+[ 11:00 AM ]
+
+Branch
+
+[ Delhi Showroom ▼ ]
+
+-------------------------------------------------------------
+
+[ Schedule Test Drive ]
+```
+
+## Functional Requirements
+
+* Select vehicle.
+* Select available slot.
+* Create appointment.
+* Trigger confirmation notifications.
+
+---
+
+# Screen 6: Opportunity Conversion Screen
+
+## Purpose
+
+Convert qualified leads into opportunities.
+
+## Wireframe
+
+```text
++-------------------------------------------------------------+
+| CONVERT LEAD                                                |
++-------------------------------------------------------------+
+
+Lead Information
+
+Customer Name: John Doe
+
+Vehicle Interest: SUV
+
+Lead Status: Qualified
+
+-------------------------------------------------------------
+
+Account Name
+
+[ John Doe ]
+
+Contact Name
+
+[ John Doe ]
+
+Opportunity Name
+
+[ SUV Purchase Opportunity ]
+
+-------------------------------------------------------------
+
+[ Convert Lead ]
+```
+
+## Functional Requirements
+
+* Create Account.
+* Create Contact.
+* Create Opportunity.
+* Link all records automatically.
+
+---
+
+# Screen 7: Follow-Up Management Screen
+
+## Purpose
+
+Manage customer communication activities.
+
+## Wireframe
+
+```text
++-------------------------------------------------------------+
+| FOLLOW-UP MANAGEMENT                                        |
++-------------------------------------------------------------+
+
+Customer: John Doe
+
+-------------------------------------------------------------
+
+Activity Type
+
+[ Phone Call ▼ ]
+
+Due Date
+
+[ 14-Jun-2026 ]
+
+Priority
+
+[ High ▼ ]
+
+Notes
+
+[_____________________________________]
+
+[_____________________________________]
+
+-------------------------------------------------------------
+
+[ Create Follow-Up ]
+```
+
+## Functional Requirements
+
+* Create tasks.
+* Set reminders.
+* Record interaction outcomes.
+
+---
+
+# Screen 8: Sales Performance Dashboard
+
+## Purpose
+
+Provide management with real-time sales insights.
+
+## Wireframe
+
+```text
++-------------------------------------------------------------+
+| SALES PERFORMANCE DASHBOARD                                 |
++-------------------------------------------------------------+
+
+Total Leads: 1245
+
+Qualified Leads: 450
+
+Converted Leads: 182
+
+Revenue Generated: ₹12.4 Cr
+
+-------------------------------------------------------------
+
+Lead Source Performance
+
+Website Leads          450
+
+Social Media Leads     300
+
+Referrals              220
+
+Walk-In Leads          275
+
+-------------------------------------------------------------
+
+Branch Performance
+
+Delhi Branch           85 Sales
+
+Mumbai Branch          62 Sales
+
+Bangalore Branch       35 Sales
+```
+
+## Functional Requirements
+
+* Display KPI metrics.
+* Compare branch performance.
+* Track conversion trends.
+* Export reports.
+
+---
+
+# Navigation Flow
+
+```text
+Dashboard
+   │
+   ├── Lead Capture
+   │
+   ├── Lead Details
+   │       │
+   │       ├── Qualify Lead
+   │       │
+   │       ├── Schedule Test Drive
+   │       │
+   │       └── Convert Lead
+   │
+   ├── Follow-Up Management
+   │
+   └── Reporting Dashboard
+```
+
+---
+
+# User Roles
+
+| Role                       | Accessible Screens                                    |
+| -------------------------- | ----------------------------------------------------- |
+| Dealer Principal           | Dashboard, Reports                                    |
+| Sales Manager              | All Screens                                           |
+| Sales Representative       | Lead Management, Qualification, Test Drive, Follow-Up |
+| Marketing Manager          | Lead Dashboard, Reports                               |
+| Customer Service Executive | Lead Capture, Lead Details                            |
+
+---
+
+# Wireframe Approval
+
+The wireframes presented in this document represent the proposed user interface structure and functional behavior of the Dealership Lead Management System. These wireframes will serve as the basis for UI design, Salesforce configuration, development, testing, and user acceptance validation.
