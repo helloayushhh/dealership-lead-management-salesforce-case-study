@@ -1,0 +1,426 @@
+# Functional Specification Document (FSD)
+
+# Project Name
+
+Dealership Lead Management Transformation using Salesforce Automotive Cloud
+
+# Document Version
+
+1.0
+
+# Prepared By
+
+Ayush Pandey
+
+# Date
+
+June 2026
+
+---
+
+# 1. Purpose
+
+This Functional Specification Document defines the functional behavior, system workflows, business rules, data requirements, notifications, and reporting capabilities required to implement an optimized dealership lead management solution using Salesforce Automotive Cloud.
+
+This document serves as the primary reference for solution architects, developers, QA teams, and business stakeholders during implementation.
+
+---
+
+# 2. Solution Overview
+
+The proposed solution will centralize dealership lead management activities within Salesforce Automotive Cloud.
+
+The system will:
+
+* Capture leads from multiple channels
+* Validate customer information
+* Assign leads automatically
+* Support lead qualification workflows
+* Schedule test drives
+* Generate follow-up activities
+* Convert qualified leads into opportunities
+* Provide dashboards and management reports
+
+---
+
+# 3. Functional Modules
+
+## Module 1: Lead Capture
+
+### Description
+
+The system shall capture customer inquiries received through various channels and create lead records in Salesforce.
+
+### Supported Lead Sources
+
+* Website Forms
+* Showroom Visits
+* Phone Calls
+* Social Media Campaigns
+* Referral Programs
+* Marketing Events
+
+### Functional Behavior
+
+1. Customer inquiry received.
+2. System validates required fields.
+3. Lead record created automatically.
+4. Lead status set to "New".
+5. Assignment process initiated.
+
+### Required Fields
+
+| Field Name        | Type     | Mandatory |
+| ----------------- | -------- | --------- |
+| First Name        | Text     | Yes       |
+| Last Name         | Text     | Yes       |
+| Mobile Number     | Phone    | Yes       |
+| Email Address     | Email    | Yes       |
+| Preferred Vehicle | Picklist | No        |
+| Lead Source       | Picklist | Yes       |
+| Branch Location   | Picklist | Yes       |
+
+### Validation Rules
+
+* Email must be valid format.
+* Phone number must contain 10 digits.
+* Duplicate records must be checked before creation.
+
+---
+
+# Module 2: Lead Assignment
+
+## Description
+
+The system shall automatically assign leads to sales representatives based on predefined assignment rules.
+
+## Assignment Logic
+
+Priority Order:
+
+1. Dealership Location
+2. Vehicle Category
+3. Sales Representative Availability
+4. Round-Robin Assignment
+
+## Functional Flow
+
+1. Lead created.
+2. System evaluates assignment criteria.
+3. Representative selected.
+4. Lead owner assigned.
+5. Notification generated.
+
+## Exception Handling
+
+If no representative is available:
+
+* Lead assigned to Sales Manager.
+* Escalation notification generated.
+
+---
+
+# Module 3: Lead Qualification
+
+## Description
+
+The system shall support structured lead qualification activities.
+
+## Qualification Criteria
+
+| Criteria            | Description                                   |
+| ------------------- | --------------------------------------------- |
+| Budget Availability | Customer has purchasing capacity              |
+| Purchase Timeline   | Customer plans purchase within defined period |
+| Vehicle Interest    | Customer identified preferred vehicle         |
+| Contact Validation  | Communication established                     |
+
+## Lead Status Values
+
+* New
+* Assigned
+* Contacted
+* Qualified
+* Unqualified
+* Nurturing
+* Converted
+* Closed
+
+## Functional Flow
+
+1. Representative contacts customer.
+2. Customer information collected.
+3. Qualification criteria evaluated.
+4. Lead status updated.
+5. Follow-up activity created.
+
+---
+
+# Module 4: Test Drive Management
+
+## Description
+
+The system shall allow dealership staff to schedule and manage customer test drives.
+
+## Functional Flow
+
+1. Qualified lead selected.
+2. Vehicle selected.
+3. Available time slot identified.
+4. Appointment scheduled.
+5. Confirmation notification sent.
+
+## Appointment Information
+
+| Field           | Description                   |
+| --------------- | ----------------------------- |
+| Customer Name   | Lead Name                     |
+| Vehicle Model   | Selected Vehicle              |
+| Test Drive Date | Scheduled Date                |
+| Test Drive Time | Scheduled Time                |
+| Branch Location | Assigned Dealership           |
+| Status          | Scheduled/Completed/Cancelled |
+
+## Notifications
+
+* Confirmation Email
+* SMS Reminder
+* Sales Representative Alert
+
+---
+
+# Module 5: Opportunity Management
+
+## Description
+
+Qualified leads shall be converted into sales opportunities.
+
+## Functional Flow
+
+1. Lead marked as Qualified.
+2. Representative initiates conversion.
+3. System creates:
+
+   * Account
+   * Contact
+   * Opportunity
+4. Opportunity assigned to representative.
+5. Opportunity enters sales pipeline.
+
+## Opportunity Stages
+
+* Qualification
+* Vehicle Selection
+* Negotiation
+* Financing
+* Proposal Submitted
+* Closed Won
+* Closed Lost
+
+---
+
+# Module 6: Follow-Up Management
+
+## Description
+
+The system shall automate customer follow-up activities.
+
+## Functional Flow
+
+1. Activity generated automatically.
+2. Reminder sent to representative.
+3. Customer contacted.
+4. Outcome recorded.
+5. Next action scheduled.
+
+## Follow-Up Types
+
+* Phone Call
+* Email
+* SMS
+* Showroom Visit
+* Test Drive Reminder
+
+## Business Rules
+
+* Every active lead must have at least one upcoming follow-up task.
+* Overdue tasks trigger reminders.
+
+---
+
+# Module 7: Duplicate Management
+
+## Description
+
+The system shall prevent duplicate customer records.
+
+## Duplicate Matching Criteria
+
+| Field         | Match Rule  |
+| ------------- | ----------- |
+| Mobile Number | Exact Match |
+| Email Address | Exact Match |
+
+## System Behavior
+
+If duplicate detected:
+
+1. Warning displayed.
+2. Existing record shown.
+3. User decides:
+
+   * Merge
+   * Update Existing
+   * Create New
+
+---
+
+# Module 8: Dashboard & Reporting
+
+## Description
+
+Management users shall have access to real-time dashboards and reports.
+
+## Dashboard 1: Sales Performance Dashboard
+
+Metrics:
+
+* Total Leads
+* Qualified Leads
+* Converted Leads
+* Conversion Rate
+* Revenue Generated
+
+## Dashboard 2: Lead Source Dashboard
+
+Metrics:
+
+* Leads by Source
+* Conversion by Source
+* Campaign Performance
+
+## Dashboard 3: Branch Performance Dashboard
+
+Metrics:
+
+* Branch-wise Leads
+* Branch-wise Conversions
+* Sales Pipeline Value
+
+---
+
+# 4. Notification Requirements
+
+## Lead Assignment Notification
+
+Trigger:
+Lead assigned.
+
+Recipient:
+Sales Representative
+
+Message:
+A new lead has been assigned for follow-up.
+
+---
+
+## Test Drive Confirmation
+
+Trigger:
+Test drive scheduled.
+
+Recipient:
+Customer
+
+Message:
+Your test drive appointment has been confirmed.
+
+---
+
+## Follow-Up Reminder
+
+Trigger:
+Task due within 24 hours.
+
+Recipient:
+Sales Representative
+
+Message:
+Customer follow-up is due.
+
+---
+
+# 5. Security & Access Control
+
+| User Role                  | Access Level           |
+| -------------------------- | ---------------------- |
+| Dealer Principal           | Full Access            |
+| Sales Manager              | Full Sales Access      |
+| Sales Representative       | Assigned Records Only  |
+| Marketing Manager          | Campaign & Lead Access |
+| Customer Service Executive | Read & Update Access   |
+| System Administrator       | Full System Access     |
+
+---
+
+# 6. Business Rules
+
+## BR-01
+
+Every lead must be assigned to an owner.
+
+## BR-02
+
+Mandatory customer information must be validated before lead creation.
+
+## BR-03
+
+Only qualified leads can be converted into opportunities.
+
+## BR-04
+
+Every active lead must have an associated follow-up task.
+
+## BR-05
+
+Duplicate records must be flagged before creation.
+
+## BR-06
+
+Lead assignment must occur within one minute of lead creation.
+
+## BR-07
+
+Test drive confirmation notifications must be sent automatically.
+
+---
+
+# 7. Acceptance Criteria
+
+| Requirement          | Acceptance Criteria                                   |
+| -------------------- | ----------------------------------------------------- |
+| Lead Capture         | Lead created successfully from all configured sources |
+| Lead Assignment      | Lead assigned automatically within 1 minute           |
+| Qualification        | Status updated correctly based on criteria            |
+| Test Drive           | Appointment scheduled and notification sent           |
+| Opportunity Creation | Opportunity generated successfully                    |
+| Reporting            | Dashboards display accurate data                      |
+| Follow-Up Tasks      | Tasks generated automatically                         |
+
+---
+
+# 8. Success Metrics
+
+| KPI                         | Target       |
+| --------------------------- | ------------ |
+| Lead Response Time          | < 15 Minutes |
+| Lead Conversion Rate        | ≥ 15%        |
+| Duplicate Records           | < 2%         |
+| Follow-Up Compliance        | ≥ 95%        |
+| Customer Satisfaction Score | ≥ 90%        |
+
+---
+
+# Approval
+
+This Functional Specification Document has been reviewed and approved by business stakeholders and will serve as the baseline for solution design, development, testing, and deployment activities.
