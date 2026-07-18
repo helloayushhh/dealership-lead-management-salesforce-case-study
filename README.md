@@ -268,40 +268,6 @@ System shall provide management dashboards and reports.
 
 ---
 
-# wireframes
-
-these wireframes helped visualize the user experience before implementation.
-
-## Lead Management Dashboard
-
-![Lead Dashboard](wireframes/dashboard.png)
-
----
-
-## Lead Capture Form
-
-![Lead Capture](wireframes/lead-capture.png)
-
----
-
-## Lead Qualification Screen
-
-![Lead Qualification](wireframes/qualification.png)
-
----
-
-## Test Drive Scheduling
-
-![Test Drive](wireframes/test-drive.png)
-
----
-
-## Reporting Dashboard
-
-![Reporting Dashboard](wireframes/reporting-dashboard.png)
-
----
-
 # process flows
 
 the diagrams below compare the existing workflow with the proposed future process.
