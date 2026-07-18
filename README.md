@@ -1,79 +1,80 @@
-# 🚗 Dealership Lead Management Transformation using Salesforce Automotive Cloud
+# dealership lead management transformation
 
-## Project Overview
-
-This project demonstrates a complete Business Analysis and Salesforce Solution Design engagement for a regional automobile dealership network.
-
-The objective is to transform a manual, fragmented lead management process into an automated, scalable, and data-driven solution using Salesforce Automotive Cloud.
-
-The project simulates a real-world Salesforce consulting engagement where a Business Analyst is responsible for gathering requirements, analyzing business processes, creating functional specifications, designing solution workflows, and supporting implementation teams.
+reimagining dealership lead management with salesforce.
 
 ---
 
-# Business Problem
+## why i built this
 
-The dealership receives customer inquiries from multiple channels including:
+i've always enjoyed understanding how businesses work before thinking about the technology behind them.
 
-* Website Forms
-* Walk-In Visits
-* Phone Calls
-* Social Media Campaigns
-* Referral Programs
-* Marketing Events
+this case study explores how a dealership's manual lead management process can be redesigned using salesforce automotive cloud. instead of writing code, the focus here is on understanding the business, documenting requirements and designing a solution that improves the overall customer journey.
 
-The existing lead management process suffers from:
-
-* Manual lead assignment
-* Delayed customer response
-* Duplicate customer records
-* Inconsistent follow-up activities
-* Limited reporting visibility
-* Poor lead conversion tracking
-
-These challenges result in lost sales opportunities, lower customer satisfaction, and reduced operational efficiency.
+it's my way of learning how business analysis, product thinking and system design come together before implementation begins.
 
 ---
 
-# Project Objectives
+# the problem
 
-The proposed Salesforce solution aims to:
+the dealership receives customer inquiries from multiple channels, including:
 
-* Centralize lead management activities
-* Automate lead assignment
-* Improve lead qualification processes
-* Streamline test drive scheduling
-* Increase lead-to-sale conversion rates
-* Improve customer engagement
-* Eliminate duplicate records
-* Enable real-time dashboards and reporting
+- website forms
+- walk-in visits
+- phone calls
+- social media campaigns
+- referral programs
+- marketing events
 
----
+as the business grows, managing leads manually becomes difficult.
 
-# Business Analyst Responsibilities Demonstrated
+some of the biggest challenges include:
 
-This project showcases core Business Analyst deliverables including:
+- manual lead assignment
+- delayed customer responses
+- duplicate customer records
+- inconsistent follow-ups
+- limited reporting
+- poor visibility into lead conversions
 
-✅ Requirement Gathering
-
-✅ Stakeholder Analysis
-
-✅ Business Process Analysis
-
-✅ BRD Creation
-
-✅ Use Case Development
-
-✅ Functional Specification Writing
-
-✅ Process Flow Documentation
-
-✅ Wireframe Creation
-
-✅ Salesforce Solution Design
+these issues slow down the sales process and make it harder to deliver a consistent customer experience.
 
 ---
 
-# Project Deliverables
+# project goals
+
+this solution focuses on making the lead management process simpler, faster and easier to scale.
+
+the proposed solution aims to:
+
+- centralize lead management
+- automate lead assignment
+- improve lead qualification
+- streamline test drive scheduling
+- improve lead-to-sale conversion
+- reduce duplicate records
+- provide real-time dashboards and reporting
+
+---
+
+# what this project demonstrates
+
+this repository focuses on the work a business analyst would typically do before development begins.
+
+it includes:
+
+- requirement gathering
+- stakeholder analysis
+- business process analysis
+- business requirements document (brd)
+- use case documentation
+- functional specifications
+- process flows
+- wireframes
+- salesforce solution design
+
+---
+
+# project deliverables
 
 | Document                           | Description                                         |
 | ---------------------------------- | --------------------------------------------------- |
@@ -88,7 +89,9 @@ This project showcases core Business Analyst deliverables including:
 
 ---
 
-# Project Repository Structure
+# repository structure
+
+this repository contains the documents, process flows and wireframes created during the case study.
 
 ```text
 Dealership-Lead-Management-Transformation/
@@ -125,9 +128,11 @@ Dealership-Lead-Management-Transformation/
 
 ---
 
-# Solution Scope
+# solution scope
 
-## In Scope
+to keep the project focused, i clearly defined what is included in the solution and what isn't.
+
+## in scope
 
 * Lead Capture
 * Lead Assignment
@@ -138,7 +143,7 @@ Dealership-Lead-Management-Transformation/
 * Reporting & Analytics
 * Customer Activity Tracking
 
-## Out of Scope
+## out of scope
 
 * Vehicle Inventory Management
 * Accounting & Billing Systems
@@ -148,9 +153,9 @@ Dealership-Lead-Management-Transformation/
 
 ---
 
-# Salesforce Solution Components
+# solution design
 
-## Standard Objects
+the proposed solution uses standard salesforce objects together with automation to simplify the dealership's lead management workflow.
 
 * Lead
 * Account
@@ -158,11 +163,11 @@ Dealership-Lead-Management-Transformation/
 * Opportunity
 * Task
 
-## Custom Objects
+## custom objects
 
 * Test Drive Appointment
 
-## Salesforce Automation
+## salesforce automation
 
 * Lead Assignment Flow
 * Lead Qualification Workflow
@@ -172,7 +177,9 @@ Dealership-Lead-Management-Transformation/
 
 ---
 
-# Lead Management Lifecycle
+# lead journey
+
+this flow shows how a customer moves from an initial inquiry to becoming a customer within the proposed solution.
 
 ```text
 Lead Created
@@ -219,7 +226,9 @@ Closed Lost
 
 ---
 
-# Key Business Requirements
+# key requirements
+
+these are some of the core business requirements identified during the analysis phase.
 
 ### BR-01
 
@@ -259,7 +268,9 @@ System shall provide management dashboards and reports.
 
 ---
 
-# Wireframes
+# wireframes
+
+these wireframes helped visualize the user experience before implementation.
 
 ## Lead Management Dashboard
 
@@ -291,9 +302,11 @@ System shall provide management dashboards and reports.
 
 ---
 
-# Process Flows
+# process flows
 
-## Current State (AS-IS)
+the diagrams below compare the existing workflow with the proposed future process.
+
+## current state (AS-IS)
 
 ```text
 Customer Inquiry
@@ -308,7 +321,7 @@ Manual Follow-Up
 Vehicle Sale
 ```
 
-## Future State (TO-BE)
+## future state (TO-BE)
 
 ```text
 Customer Inquiry
@@ -334,7 +347,9 @@ Vehicle Sale
 
 ---
 
-# Success Metrics
+# success metrics
+
+these are the business outcomes the proposed solution aims to improve.
 
 | KPI                   | Current State | Target State |
 | --------------------- | ------------- | ------------ |
@@ -346,58 +361,57 @@ Vehicle Sale
 
 ---
 
-# Business Impact
+# expected impact
 
-The proposed solution delivers:
+if implemented, the solution could help dealerships:
 
-* Faster customer engagement
-* Higher lead conversion rates
-* Improved sales productivity
-* Better customer experience
-* Reduced manual effort
-* Improved reporting visibility
-* Standardized dealership processes
-
----
-
-# Skills Demonstrated
-
-### Business Analysis
-
-* Requirement Gathering
-* Stakeholder Management
-* Process Modeling
-* Gap Analysis
-* Requirement Documentation
-* Functional Specification Development
-
-### Salesforce Domain Knowledge
-
-* Automotive Cloud
-* Lead Management
-* Opportunity Management
-* Workflow Automation
-* CRM Process Design
-
-### Documentation
-
-* BRD
-* Use Cases
-* Functional Specification Document
-* Process Flows
-* Wireframes
-* Solution Design
-* RTM
-* UAT Test Cases
+- respond to customers faster
+- improve lead conversion
+- reduce manual work
+- improve reporting
+- standardize lead management
+- create a better customer experience
 
 ---
 
-# Author
+# what i learned
 
-Ayush Pandey
+this project gave me practical experience in understanding business problems before thinking about implementation.
 
-Business Analyst | Salesforce Consulting Case Study | Process Analysis | Requirements Engineering | Solution Design
+through this case study i explored:
+
+### business analysis
+
+- requirement gathering
+- stakeholder management
+- process modelling
+- gap analysis
+- requirement documentation
+- functional specifications
+
+### salesforce
+
+- automotive cloud
+- lead management
+- opportunity management
+- workflow automation
+- crm process design
+
+### documentation
+
+- brd
+- use cases
+- functional specification
+- process flows
+- wireframes
+- solution design
+- rtm
+- uat test cases
 
 ---
 
-*This project was created as a portfolio case study to demonstrate Business Analysis, Salesforce CRM process design, requirement management, and solution documentation capabilities in a dealership lead management environment.*
+this is a learning project created to better understand business analysis, salesforce solution design and product thinking through a real-world case study.
+
+see you in the next build.
+
+— aps
